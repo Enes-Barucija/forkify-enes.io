@@ -4,7 +4,7 @@ import View from "./View.js";
 // Importing icons for the UI. This is from the point of view of the recipeView.js file. So, the icons are essentially 2 folders lower, so we use ../..
 import icons from "url:../../img/icons.svg";
 // Importing a library to handle fractions (to turn for example 0.5 to 1/2)
-import { Fraction } from "fractional";
+// import { Fraction } from "fractional";
 
 // Extending the child class to the parent class View
 class RecipeView extends View {
@@ -141,7 +141,7 @@ class RecipeView extends View {
         <use href="${icons}#icon-check"></use>
       </svg>
       <div class="recipe__quantity">${
-        ing.quantity ? new Fraction(ing.quantity).toString() : ""
+        ing.quantity ? ing.quantity: ""
       }</div>
       <div class="recipe__description">
         <span class="recipe__unit">${ing.unit}</span>
